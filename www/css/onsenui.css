@@ -75,7 +75,7 @@ ons-toolbar ~ .page__content {
 .page__status-bar-fill ~ ons-toolbar > .left,
 .page__status-bar-fill ~ ons-toolbar > .right {
   padding-top: 20px;
-}
+   }
 
 .page__status-bar-fill ~ ons-toolbar ~ .page__content {
   top: 64px;
