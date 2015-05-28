@@ -118,16 +118,14 @@
   <ons-navigator title="Navigator" var="myNavigator">
     <ons-page style="background-color: #e6e6e6">
         <ons-toolbar style="border: none;">
-            <div class="left"><ons-back-button>
-    Back
-</ons-back-button></div>
+            <div class="left"></div>
             <div class="center">
                 <div class="centered">
                     Jukeboxly
                 </div>
             </div>
             <div class="right">
-                <ons-button onclick=" myNavigator.pushPage('search.html', { animation: 'slide' }) " modifier="quiet">
+                <ons-button onclick="myNavigator.pushPage('search.html', { animation: 'lift' })" modifier="quiet">
                     <ons-icon icon="ion-android-search" style="font-size: 32px; width: 1em">
                 </ons-button>
             </div>

@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en" ng-app="app">
 
 <head>
@@ -14,6 +14,8 @@
 
   <script src="lib/onsen/js/angular/angular.js"></script>
   <script src="lib/onsen/js/onsenui.js"></script>
+
+  <script src="js/picker.js"></script><script src="https://apis.google.com/js/client.js?onload=gapiInit"></script>
 
   <script src="cordova.js"></script>
 
@@ -93,36 +95,54 @@
     }
 
     .header {
-        text-align: center;
-        width: 300px;
-        color: #000;
-        height: 30px;
+      text-align: center;
+      width: 300px;
+      color: #000;
+      height: 30px;
     }
 
     .centered {
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: 5%;
-    right: 0px;
-    bottom: 20%;
-    left: 0px;
-    margin: auto;
-    text-align: center;
-}
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 5%;
+      right: 0px;
+      bottom: 20%;
+      left: 0px;
+      margin: auto;
+      text-align: center;
+    }
   </style>
 </head>
 
 <body>
-<ons-navigator title="Navigator" var="myNavigator">
-    <ons-page>
-        <ons-toolbar>
-            <div class="left" style="width: 10%"></div>
-            <div class="center" style="width: inherit"><input type="search" class="search-input"/></div>
-            <div class="right"></div>
-        </ons-toolbar>
-    </ons-page>
-</ons-navigator>
+  <ons-page style="background-color: #e6e6e6">
+    <ons-toolbar>
+      <div class="left" style="width: 8%">
+        <ons-button onclick="myNavigator.popPage();" modifier="quiet">
+          <ons-icon icon="ion-chevron-left">
+        </ons-button>
+      </div>
+      <div class="center" style="width: 90%">
+        <input id="searchBox" type="search" class="search-input" style="width: 100%; margin: 6px auto 6px auto;" placeholder="Search YouTube">
+      </div>
+      <div class="right"></div>
+    </ons-toolbar>
+
+    <div class="panel panel-default" id="playlistPanel">
+        <div class="panel-heading">
+            <h4>Search Results</h4>
+        </div>
+        <div class="panel-body" id="playlistWrapper">
+        </div><!--/panel-body-->
+        <a class="list-group-item" href="javascript:_run()" id="skipButton" style="background:#009688; color:white;"><div><center><h5>Skip Song</h5></center></div></a>
+
+    </div><!--/panel-->
+    <div id="ytPlayer">
+        Loading...
+    </div>
+  </ons-page>
 </body>
 
+</html></body>
 </html>
