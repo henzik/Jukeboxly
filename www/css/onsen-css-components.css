@@ -2944,7 +2944,7 @@ input[type="search"].search-input::-webkit-search-cancel-button {
 }
 .search-input {
   padding: 0;
-  margin: 0;
+  margin: 0; 
   font: inherit;
   color: inherit;
   background: transparent;

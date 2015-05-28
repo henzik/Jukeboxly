@@ -111,43 +111,18 @@
     text-align: center;
 }
   </style>
-
 </head>
 
 <body>
-  <ons-navigator title="Navigator" var="myNavigator">
-    <ons-page style="background-color: #e6e6e6">
-        <ons-toolbar style="border: none;">
-            <div class="left"><ons-back-button>
-    Back
-</ons-back-button></div>
-            <div class="center">
-                <div class="centered">
-                    Jukeboxly
-                </div>
-            </div>
-            <div class="right">
-                <ons-button onclick=" myNavigator.pushPage('search.html', { animation: 'slide' }) " modifier="quiet">
-                    <ons-icon icon="ion-android-search" style="font-size: 32px; width: 1em">
-                </ons-button>
-            </div>
+<ons-navigator title="Navigator" var="myNavigator">
+    <ons-page>
+        <ons-toolbar>
+            <div class="left" style="width: 10%"></div>
+            <div class="center" style="width: inherit"><input type="search" class="search-input"/></div>
+            <div class="right"></div>
         </ons-toolbar>
-      <ons-tabbar position="top">
-        <ons-tab page="home.html" active="true">
-          <ons-icon icon="ion-headphone"></ons-icon>
-          <span style="font-size: 14px">Party</span>
-        </ons-tab>
-        <ons-tab page="fav.html">
-          <ons-icon icon="ion-star"></ons-icon>
-          <span style="font-size: 14px">Favorites</span>
-        </ons-tab>
-      </ons-tabbar>
-
-      <ons-bottom-toolbar>
-        <div style="text-align: center; line-height: 44px">Not Connected to Session</div>
-      </ons-bottom-toolbar>
     </ons-page>
-  </ons-navigator>
+</ons-navigator>
 </body>
 
 </html>
